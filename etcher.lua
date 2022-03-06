@@ -9,13 +9,6 @@ local VERSION_LABEL = Instance.new("TextLabel")
 local LOGO = Instance.new("TextLabel")
 local ETCHER = Instance.new("Frame")
 local TITLE = Instance.new("TextLabel")
-local PANEL_E = Instance.new("Frame")
-local HEAL_BUTTON = Instance.new("TextButton")
-local KILL_BUTTON = Instance.new("TextButton")
-local TIP_1 = Instance.new("TextLabel")
-local FLY_BUTTON = Instance.new("TextButton")
-local LEVITATE_BUTTON = Instance.new("TextButton")
-local LEVITATE_BUTTON_2 = Instance.new("TextButton")
 local PANEL_A = Instance.new("Frame")
 local CREDIT_A = Instance.new("TextLabel")
 local OK_BUTTON = Instance.new("TextButton")
@@ -38,10 +31,19 @@ local BLACK_E = Instance.new("TextButton")
 local BLANK_D = Instance.new("TextButton")
 local TIP = Instance.new("TextLabel")
 local BLANK_A = Instance.new("TextButton")
+local PANEL_E = Instance.new("ScrollingFrame")
+local HEAL_BUTTON = Instance.new("TextButton")
+local KILL_BUTTON = Instance.new("TextButton")
+local TIP_1 = Instance.new("TextLabel")
+local FLY_BUTTON = Instance.new("TextButton")
+local LEVITATE_BUTTON = Instance.new("TextButton")
+local REMOVELEGS_BUTTON = Instance.new("TextButton")
+local TRIGGERLEGVISIBILITY_BUTTON = Instance.new("TextButton")
+local TRIGGERVISIBILITY_BUTTON = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.CoreGui
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 LOADING_FRAME.Name = "LOADING_FRAME"
@@ -95,81 +97,6 @@ TITLE.Font = Enum.Font.Ubuntu
 TITLE.Text = "ETCHER"
 TITLE.TextColor3 = Color3.fromRGB(255, 255, 255)
 TITLE.TextSize = 20.000
-
-PANEL_E.Name = "PANEL_E"
-PANEL_E.Parent = ETCHER
-PANEL_E.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-PANEL_E.BorderSizePixel = 0
-PANEL_E.Position = UDim2.new(0.0218749996, 0, 0.130434781, 0)
-PANEL_E.Size = UDim2.new(0, 307, 0, 174)
-
-HEAL_BUTTON.Name = "HEAL_BUTTON"
-HEAL_BUTTON.Parent = PANEL_E
-HEAL_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-HEAL_BUTTON.BorderSizePixel = 0
-HEAL_BUTTON.Position = UDim2.new(0.0684038922, 0, 0.0459769815, 0)
-HEAL_BUTTON.Size = UDim2.new(0, 84, 0, 26)
-HEAL_BUTTON.Font = Enum.Font.SourceSans
-HEAL_BUTTON.Text = "HEAL"
-HEAL_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-HEAL_BUTTON.TextSize = 14.000
-
-KILL_BUTTON.Name = "KILL_BUTTON"
-KILL_BUTTON.Parent = PANEL_E
-KILL_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-KILL_BUTTON.BorderSizePixel = 0
-KILL_BUTTON.Position = UDim2.new(0.361563563, 0, 0.0459769703, 0)
-KILL_BUTTON.Size = UDim2.new(0, 84, 0, 26)
-KILL_BUTTON.Font = Enum.Font.SourceSans
-KILL_BUTTON.Text = "KILL"
-KILL_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-KILL_BUTTON.TextSize = 14.000
-
-TIP_1.Name = "TIP_1"
-TIP_1.Parent = PANEL_E
-TIP_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TIP_1.BackgroundTransparency = 1.000
-TIP_1.Position = UDim2.new(0.0684039071, 0, 0.833333313, 0)
-TIP_1.Size = UDim2.new(0, 264, 0, 29)
-TIP_1.Font = Enum.Font.SourceSans
-TIP_1.Text = "PRESS LEFT 'ALT' TO HIDE/SHOW ETCHER SCRIPTHUB"
-TIP_1.TextColor3 = Color3.fromRGB(255, 255, 255)
-TIP_1.TextSize = 14.000
-TIP_1.TextXAlignment = Enum.TextXAlignment.Left
-TIP_1.TextYAlignment = Enum.TextYAlignment.Top
-
-FLY_BUTTON.Name = "FLY_BUTTON"
-FLY_BUTTON.Parent = PANEL_E
-FLY_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-FLY_BUTTON.BorderSizePixel = 0
-FLY_BUTTON.Position = UDim2.new(0.654723167, 0, 0.0459769703, 0)
-FLY_BUTTON.Size = UDim2.new(0, 84, 0, 26)
-FLY_BUTTON.Font = Enum.Font.SourceSans
-FLY_BUTTON.Text = "FLY"
-FLY_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-FLY_BUTTON.TextSize = 14.000
-
-LEVITATE_BUTTON.Name = "LEVITATE_BUTTON"
-LEVITATE_BUTTON.Parent = PANEL_E
-LEVITATE_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-LEVITATE_BUTTON.BorderSizePixel = 0
-LEVITATE_BUTTON.Position = UDim2.new(0.0684039593, 0, 0.229885012, 0)
-LEVITATE_BUTTON.Size = UDim2.new(0, 84, 0, 26)
-LEVITATE_BUTTON.Font = Enum.Font.SourceSans
-LEVITATE_BUTTON.Text = "LEVITATE"
-LEVITATE_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-LEVITATE_BUTTON.TextSize = 14.000
-
-LEVITATE_BUTTON_2.Name = "LEVITATE_BUTTON"
-LEVITATE_BUTTON_2.Parent = PANEL_E
-LEVITATE_BUTTON_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-LEVITATE_BUTTON_2.BorderSizePixel = 0
-LEVITATE_BUTTON_2.Position = UDim2.new(0.361563563, 0, 0.229885012, 0)
-LEVITATE_BUTTON_2.Size = UDim2.new(0, 84, 0, 26)
-LEVITATE_BUTTON_2.Font = Enum.Font.SourceSans
-LEVITATE_BUTTON_2.Text = "LEVITATE"
-LEVITATE_BUTTON_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-LEVITATE_BUTTON_2.TextSize = 14.000
 
 PANEL_A.Name = "PANEL_A"
 PANEL_A.Parent = ETCHER
@@ -417,9 +344,111 @@ BLANK_A.Text = ""
 BLANK_A.TextColor3 = Color3.fromRGB(255, 255, 255)
 BLANK_A.TextSize = 14.000
 
+PANEL_E.Name = "PANEL_E"
+PANEL_E.Parent = ETCHER
+PANEL_E.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PANEL_E.BorderSizePixel = 0
+PANEL_E.Position = UDim2.new(0.0187499989, 0, 0.130434781, 0)
+PANEL_E.Selectable = false
+PANEL_E.Size = UDim2.new(0, 307, 0, 174)
+PANEL_E.BottomImage = "rbxassetid://70105995"
+PANEL_E.CanvasPosition = Vector2.new(0, 4.44826508)
+PANEL_E.MidImage = "rbxassetid://70105995"
+PANEL_E.TopImage = "rbxassetid://70105995"
+
+HEAL_BUTTON.Name = "HEAL_BUTTON"
+HEAL_BUTTON.Parent = PANEL_E
+HEAL_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+HEAL_BUTTON.BorderSizePixel = 0
+HEAL_BUTTON.Position = UDim2.new(0.071661219, 0, 0.0725470334, 0)
+HEAL_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+HEAL_BUTTON.Font = Enum.Font.SourceSans
+HEAL_BUTTON.Text = "HEAL"
+HEAL_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+HEAL_BUTTON.TextSize = 14.000
+
+KILL_BUTTON.Name = "KILL_BUTTON"
+KILL_BUTTON.Parent = PANEL_E
+KILL_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+KILL_BUTTON.BorderSizePixel = 0
+KILL_BUTTON.Position = UDim2.new(0.364820898, 0, 0.0725470185, 0)
+KILL_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+KILL_BUTTON.Font = Enum.Font.SourceSans
+KILL_BUTTON.Text = "KILL"
+KILL_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+KILL_BUTTON.TextSize = 14.000
+
+TIP_1.Name = "TIP_1"
+TIP_1.Parent = PANEL_E
+TIP_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_1.BackgroundTransparency = 1.000
+TIP_1.Position = UDim2.new(0.0716612339, 0, 0.0217391253, 0)
+TIP_1.Size = UDim2.new(0, 264, 0, 29)
+TIP_1.Font = Enum.Font.SourceSans
+TIP_1.Text = "PRESS LEFT 'ALT' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_1.TextSize = 14.000
+TIP_1.TextXAlignment = Enum.TextXAlignment.Left
+TIP_1.TextYAlignment = Enum.TextYAlignment.Top
+
+FLY_BUTTON.Name = "FLY_BUTTON"
+FLY_BUTTON.Parent = PANEL_E
+FLY_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+FLY_BUTTON.BorderSizePixel = 0
+FLY_BUTTON.Position = UDim2.new(0.657980502, 0, 0.0725470185, 0)
+FLY_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+FLY_BUTTON.Font = Enum.Font.SourceSans
+FLY_BUTTON.Text = "FLY"
+FLY_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+FLY_BUTTON.TextSize = 14.000
+
+LEVITATE_BUTTON.Name = "LEVITATE_BUTTON"
+LEVITATE_BUTTON.Parent = PANEL_E
+LEVITATE_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+LEVITATE_BUTTON.BorderSizePixel = 0
+LEVITATE_BUTTON.Position = UDim2.new(0.0716612861, 0, 0.150174871, 0)
+LEVITATE_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+LEVITATE_BUTTON.Font = Enum.Font.SourceSans
+LEVITATE_BUTTON.Text = "LEVITATE"
+LEVITATE_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+LEVITATE_BUTTON.TextSize = 14.000
+
+REMOVELEGS_BUTTON.Name = "REMOVELEGS_BUTTON"
+REMOVELEGS_BUTTON.Parent = PANEL_E
+REMOVELEGS_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+REMOVELEGS_BUTTON.BorderSizePixel = 0
+REMOVELEGS_BUTTON.Position = UDim2.new(0.657980502, 0, 0.230218157, 0)
+REMOVELEGS_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+REMOVELEGS_BUTTON.Font = Enum.Font.SourceSans
+REMOVELEGS_BUTTON.Text = "REMOVE LEGS"
+REMOVELEGS_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+REMOVELEGS_BUTTON.TextSize = 14.000
+
+TRIGGERLEGVISIBILITY_BUTTON.Name = "TRIGGERLEGVISIBILITY_BUTTON"
+TRIGGERLEGVISIBILITY_BUTTON.Parent = PANEL_E
+TRIGGERLEGVISIBILITY_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TRIGGERLEGVISIBILITY_BUTTON.BorderSizePixel = 0
+TRIGGERLEGVISIBILITY_BUTTON.Position = UDim2.new(0.0716612339, 0, 0.230218217, 0)
+TRIGGERLEGVISIBILITY_BUTTON.Size = UDim2.new(0, 174, 0, 26)
+TRIGGERLEGVISIBILITY_BUTTON.Font = Enum.Font.SourceSans
+TRIGGERLEGVISIBILITY_BUTTON.Text = "TRIGGER LEG VISIBILITY"
+TRIGGERLEGVISIBILITY_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERLEGVISIBILITY_BUTTON.TextSize = 14.000
+
+TRIGGERVISIBILITY_BUTTON.Name = "TRIGGERVISIBILITY_BUTTON"
+TRIGGERVISIBILITY_BUTTON.Parent = PANEL_E
+TRIGGERVISIBILITY_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TRIGGERVISIBILITY_BUTTON.BorderSizePixel = 0
+TRIGGERVISIBILITY_BUTTON.Position = UDim2.new(0.364820838, 0, 0.152923524, 0)
+TRIGGERVISIBILITY_BUTTON.Size = UDim2.new(0, 174, 0, 26)
+TRIGGERVISIBILITY_BUTTON.Font = Enum.Font.SourceSans
+TRIGGERVISIBILITY_BUTTON.Text = "TRIGGER COMPLETE VISIBILITY"
+TRIGGERVISIBILITY_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERVISIBILITY_BUTTON.TextSize = 14.000
+
 -- Scripts:
 
-local function HVCMWXW_fake_script() -- ScreenGui.MAIN_HANDLER 
+local function TPVQZW_fake_script() -- ScreenGui.MAIN_HANDLER 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local TweenService = game:GetService('TweenService')
@@ -465,8 +494,48 @@ local function HVCMWXW_fake_script() -- ScreenGui.MAIN_HANDLER
 	script.Parent.ETCHER.PANEL_D.Visible = false
 	script.Parent.ETCHER.PANEL_E.Visible = false
 end
-coroutine.wrap(HVCMWXW_fake_script)()
-local function SYGM_fake_script() -- PANEL_E.PAGE_C_HANDLER 
+coroutine.wrap(TPVQZW_fake_script)()
+local function UDKB_fake_script() -- PANEL_A.PAGE_A_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_A)
+
+	script.Parent.OK_BUTTON.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.PANEL_B.Visible = true
+	end)
+end
+coroutine.wrap(UDKB_fake_script)()
+local function DNQCOGI_fake_script() -- PANEL_B.PAGE_B_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_B)
+
+	script.Parent.NO_BUTTON.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.PANEL_C.Visible = true
+	end)
+	script.Parent.YES_BUTTON.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.PANEL_D.Visible = true
+	end)
+end
+coroutine.wrap(DNQCOGI_fake_script)()
+local function XFXQE_fake_script() -- PANEL_C.PAGE_C_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_C)
+
+	script.Parent.OK_BUTTON_A.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.PANEL_D.Visible = true
+	end)
+end
+coroutine.wrap(XFXQE_fake_script)()
+local function XTFQLIW_fake_script() -- PANEL_D.PAGE_C_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_D)
+
+	script.Parent.GENERAL.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.PANEL_E.Visible = true
+	end)
+end
+coroutine.wrap(XTFQLIW_fake_script)()
+local function KQBTPKX_fake_script() -- PANEL_E.PAGE_C_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_E)
 
 	local TweenService = game:GetService("TweenService")
@@ -551,6 +620,8 @@ local function SYGM_fake_script() -- PANEL_E.PAGE_C_HANDLER
 	local LEVITATE_ACTIVE = false
 	
 	local FLY_ACTIVE = false
+	local LEG_VISIBILITY_ON = true
+	local OVERALL_VISIBILITY = true
 	
 	script.Parent.KILL_BUTTON.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
@@ -576,49 +647,166 @@ local function SYGM_fake_script() -- PANEL_E.PAGE_C_HANDLER
 			Fly()
 		end
 	end)
-end
-coroutine.wrap(SYGM_fake_script)()
-local function FFJZ_fake_script() -- PANEL_A.PAGE_A_HANDLER 
-	local script = Instance.new('LocalScript', PANEL_A)
-
-	script.Parent.OK_BUTTON.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_B.Visible = true
+	script.Parent.REMOVELEGS_BUTTON.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+			local leftLeg = game.Players.LocalPlayer.Character:FindFirstChild("Left Leg")
+			if leftLeg then leftLeg:Destroy() end
+			local rightLeg = game.Players.LocalPlayer.Character:FindFirstChild("Right Leg")
+			if rightLeg then rightLeg:Destroy() end
+		elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+			local leftUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperLeg")
+			if leftUpperLeg then leftUpperLeg:Destroy() end
+			local leftLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerLeg")
+			if leftLowerLeg then leftLowerLeg:Destroy() end
+			local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+			if leftFoot then leftFoot:Destroy() end
+			local rightUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperLeg")
+			if rightUpperLeg then rightUpperLeg:Destroy() end
+			local rightLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+			if rightLowerLeg then rightLowerLeg:Destroy() end
+			local rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+			if rightFoot then rightFoot:Destroy() end
+		end
+	end)
+	script.Parent.TRIGGERLEGVISIBILITY_BUTTON.MouseButton1Click:Connect(function()
+		LEG_VISIBILITY_ON = not LEG_VISIBILITY_ON
+		if LEG_VISIBILITY_ON == false then
+			if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+				local leftLeg = game.Players.LocalPlayer.Character:FindFirstChild("Left Leg")
+				if leftLeg then leftLeg.Transparency = 1 end
+				local rightLeg = game.Players.LocalPlayer.Character:FindFirstChild("Right Leg")
+				if rightLeg then rightLeg.Transparency = 1 end
+			elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local leftUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperLeg")
+				if leftUpperLeg then leftUpperLeg.Transparency = 1 end
+				local leftLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerLeg")
+				if leftLowerLeg then leftLowerLeg.Transparency = 1 end
+				local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+				if leftFoot then leftFoot.Transparency = 1 end
+				local rightUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperLeg")
+				if rightUpperLeg then rightUpperLeg.Transparency = 1 end
+				local rightLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+				if rightLowerLeg then rightLowerLeg.Transparency = 1 end
+				local rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+				if rightFoot then rightFoot.Transparency = 1 end
+			end
+		elseif LEG_VISIBILITY_ON == true then
+			if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+				local leftLeg = game.Players.LocalPlayer.Character:FindFirstChild("Left Leg")
+				if leftLeg then leftLeg.Transparency = 0 end
+				local rightLeg = game.Players.LocalPlayer.Character:FindFirstChild("Right Leg")
+				if rightLeg then rightLeg.Transparency = 0 end
+			elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local leftUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperLeg")
+				if leftUpperLeg then leftUpperLeg.Transparency = 0 end
+				local leftLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerLeg")
+				if leftLowerLeg then leftLowerLeg.Transparency = 0 end
+				local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+				if leftFoot then leftFoot.Transparency = 0 end
+				local rightUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperLeg")
+				if rightUpperLeg then rightUpperLeg.Transparency = 0 end
+				local rightLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+				if rightLowerLeg then rightLowerLeg.Transparency = 0 end
+				local rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+				if rightFoot then rightFoot.Transparency = 0 end
+			end
+		end
+	end)
+	script.Parent.TRIGGERVISIBILITY_BUTTON.MouseButton1Click:Connect(function()
+		OVERALL_VISIBILITY = not OVERALL_VISIBILITY
+		if OVERALL_VISIBILITY == false then
+			if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+				game.Players.LocalPlayer.Character.Head.Transparency = 1
+				local torso = game.Players.LocalPlayer.Character:FindFirstChild("Torso")
+				if torso then torso.Transparency = 1 end
+				local leftArm = game.Players.LocalPlayer.Character:FindFirstChild("Left Arm")
+				if leftArm then leftArm.Transparency = 1 end
+				local rightArm = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm")
+				if rightArm then rightArm.Transparency = 1 end
+				local leftLeg = game.Players.LocalPlayer.Character:FindFirstChild("Left Leg")
+				if leftLeg then leftLeg.Transparency = 1 end
+				local rightLeg = game.Players.LocalPlayer.Character:FindFirstChild("Right Leg")
+				if rightLeg then rightLeg.Transparency = 1 end
+			elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				game.Players.LocalPlayer.Character.Head.Transparency = 1
+				local upperTorso = game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")
+				if upperTorso then upperTorso.Transparency = 1 end
+				local lowerTorso = game.Players.LocalPlayer.Character:FindFirstChild("LowerTorso")
+				if lowerTorso then lowerTorso.Transparency = 1 end
+				local leftUpperArm = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperArm")
+				if leftUpperArm then leftUpperArm.Transparency = 1 end
+				local leftLowerArm = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerArm")
+				if leftLowerArm then leftLowerArm.Transparency = 1 end
+				local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+				if leftFoot then leftFoot.Transparency = 1 end
+				local rightUpperArm = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperArm")
+				if rightUpperArm then rightUpperArm.Transparency = 1 end
+				local rightLowerArm = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerArm")
+				if rightLowerArm then rightLowerArm.Transparency = 1 end
+				local rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+				if rightFoot then rightFoot.Transparency = 1 end
+				local leftUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperLeg")
+				if leftUpperLeg then leftUpperLeg.Transparency = 1 end
+				local leftLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerLeg")
+				if leftLowerLeg then leftLowerLeg.Transparency = 1 end
+				local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+				if leftFoot then leftFoot.Transparency = 1 end
+				local rightUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperLeg")
+				if rightUpperLeg then rightUpperLeg.Transparency = 1 end
+				local rightLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+				if rightLowerLeg then rightLowerLeg.Transparency = 1 end
+				rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+				if rightFoot then rightFoot.Transparency = 1 end
+			end
+		elseif OVERALL_VISIBILITY == true then
+			if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+				game.Players.LocalPlayer.Character.Head.Transparency = 0
+				local torso = game.Players.LocalPlayer.Character:FindFirstChild("Torso")
+				if torso then torso.Transparency = 0 end
+				local leftArm = game.Players.LocalPlayer.Character:FindFirstChild("Left Arm")
+				if leftArm then leftArm.Transparency = 0 end
+				local rightArm = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm")
+				if rightArm then rightArm.Transparency = 0 end
+				local leftLeg = game.Players.LocalPlayer.Character:FindFirstChild("Left Leg")
+				if leftLeg then leftLeg.Transparency = 0 end
+				local rightLeg = game.Players.LocalPlayer.Character:FindFirstChild("Right Leg")
+				if rightLeg then rightLeg.Transparency = 0 end
+			elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				game.Players.LocalPlayer.Character.Head.Transparency = 0
+				local upperTorso = game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")
+				if upperTorso then upperTorso.Transparency = 0 end
+				local lowerTorso = game.Players.LocalPlayer.Character:FindFirstChild("LowerTorso")
+				if lowerTorso then lowerTorso.Transparency = 0 end
+				local leftUpperArm = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperArm")
+				if leftUpperArm then leftUpperArm.Transparency = 0 end
+				local leftLowerArm = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerArm")
+				if leftLowerArm then leftLowerArm.Transparency = 0 end
+				local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+				if leftFoot then leftFoot.Transparency = 0 end
+				local rightUpperArm = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperArm")
+				if rightUpperArm then rightUpperArm.Transparency = 0 end
+				local rightLowerArm = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerArm")
+				if rightLowerArm then rightLowerArm.Transparency = 0 end
+				local rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+				if rightFoot then rightFoot.Transparency = 0 end
+				local leftUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftUpperLeg")
+				if leftUpperLeg then leftUpperLeg.Transparency = 0 end
+				local leftLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("LeftLowerLeg")
+				if leftLowerLeg then leftLowerLeg.Transparency = 0 end
+				local leftFoot = game.Players.LocalPlayer.Character:FindFirstChild("LeftFoot")
+				if leftFoot then leftFoot.Transparency = 0 end
+				local rightUpperLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightUpperLeg")
+				if rightUpperLeg then rightUpperLeg.Transparency = 0 end
+				local rightLowerLeg = game.Players.LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+				if rightLowerLeg then rightLowerLeg.Transparency = 0 end
+				rightFoot = game.Players.LocalPlayer.Character:FindFirstChild("RightFoot")
+				if rightFoot then rightFoot.Transparency = 0 end
+			end
+		end
 	end)
 end
-coroutine.wrap(FFJZ_fake_script)()
-local function VGIGX_fake_script() -- PANEL_B.PAGE_B_HANDLER 
-	local script = Instance.new('LocalScript', PANEL_B)
-
-	script.Parent.NO_BUTTON.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_C.Visible = true
-	end)
-	script.Parent.YES_BUTTON.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = true
-	end)
-end
-coroutine.wrap(VGIGX_fake_script)()
-local function AKWVJ_fake_script() -- PANEL_C.PAGE_C_HANDLER 
-	local script = Instance.new('LocalScript', PANEL_C)
-
-	script.Parent.OK_BUTTON_A.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = true
-	end)
-end
-coroutine.wrap(AKWVJ_fake_script)()
-local function EGUUV_fake_script() -- PANEL_D.PAGE_C_HANDLER 
-	local script = Instance.new('LocalScript', PANEL_D)
-
-	script.Parent.GENERAL.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_E.Visible = true
-	end)
-end
-coroutine.wrap(EGUUV_fake_script)()
-local function SCWAWO_fake_script() -- ScreenGui.HIDE_SLASH_SHOW 
+coroutine.wrap(KQBTPKX_fake_script)()
+local function LVYIOH_fake_script() -- ScreenGui.HIDE_SLASH_SHOW 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	game:GetService("UserInputService").InputBegan:connect(function(input, Processed)
@@ -633,4 +821,4 @@ local function SCWAWO_fake_script() -- ScreenGui.HIDE_SLASH_SHOW
 		end
 	end)
 end
-coroutine.wrap(SCWAWO_fake_script)()
+coroutine.wrap(LVYIOH_fake_script)()
