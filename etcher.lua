@@ -25,24 +25,26 @@ local OK_BUTTON_A = Instance.new("TextButton")
 local QUESTION_E = Instance.new("TextLabel")
 local PANEL_D = Instance.new("Frame")
 local GENERAL = Instance.new("TextButton")
-local BLANK_B = Instance.new("TextButton")
-local BLANK_C = Instance.new("TextButton")
-local BLACK_E = Instance.new("TextButton")
-local BLANK_D = Instance.new("TextButton")
 local TIP = Instance.new("TextLabel")
-local ANIMATION = Instance.new("TextButton")
+local ANIMATIONS = Instance.new("TextButton")
+local GAMES = Instance.new("TextButton")
 local PANEL_E = Instance.new("ScrollingFrame")
 local HEAL_BUTTON = Instance.new("TextButton")
 local KILL_BUTTON = Instance.new("TextButton")
 local TIP_1 = Instance.new("TextLabel")
 local FLY_BUTTON = Instance.new("TextButton")
-local LIGHT_BUTTON = Instance.new("TextButton")
 local PANEL_F = Instance.new("ScrollingFrame")
-local TIP_2 = Instance.new("TextLabel")
 local LEVITATE_BUTTON = Instance.new("TextButton")
-local ESC_BUTTON = Instance.new("TextButton")
-local SETTINGS = Instance.new("TextBox")
-local ISSYNAPSE = Instance.new("TextLabel")
+local TIP_2 = Instance.new("TextLabel")
+local ESC = Instance.new("TextButton")
+local PANEL_G = Instance.new("ScrollingFrame")
+local DOR_BUTTON = Instance.new("TextButton")
+local TIP_3 = Instance.new("TextLabel")
+local PANEL_H = Instance.new("ScrollingFrame")
+local TP_SEC_CH_BUTTON = Instance.new("TextButton")
+local TIP_4 = Instance.new("TextLabel")
+local TP_DOR_LOBBY_BUTTON = Instance.new("TextButton")
+local GET_ALL_GUNS_DOR_BUTTON = Instance.new("TextButton")
 
 --Properties:
 
@@ -107,7 +109,6 @@ PANEL_A.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 PANEL_A.BorderSizePixel = 0
 PANEL_A.Position = UDim2.new(0.0218749996, 0, 0.130434781, 0)
 PANEL_A.Size = UDim2.new(0, 307, 0, 174)
-PANEL_A.Visible = false
 
 CREDIT_A.Name = "CREDIT_A"
 CREDIT_A.Parent = PANEL_A
@@ -279,50 +280,6 @@ GENERAL.Text = "GENERAL"
 GENERAL.TextColor3 = Color3.fromRGB(255, 255, 255)
 GENERAL.TextSize = 14.000
 
-BLANK_B.Name = "BLANK_B"
-BLANK_B.Parent = PANEL_D
-BLANK_B.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-BLANK_B.BorderSizePixel = 0
-BLANK_B.Position = UDim2.new(0.654723108, 0, 0.0344827175, 0)
-BLANK_B.Size = UDim2.new(0, 84, 0, 26)
-BLANK_B.Font = Enum.Font.SourceSans
-BLANK_B.Text = ""
-BLANK_B.TextColor3 = Color3.fromRGB(255, 255, 255)
-BLANK_B.TextSize = 14.000
-
-BLANK_C.Name = "BLANK_C"
-BLANK_C.Parent = PANEL_D
-BLANK_C.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-BLANK_C.BorderSizePixel = 0
-BLANK_C.Position = UDim2.new(0.065146558, 0, 0.218390763, 0)
-BLANK_C.Size = UDim2.new(0, 84, 0, 26)
-BLANK_C.Font = Enum.Font.SourceSans
-BLANK_C.Text = ""
-BLANK_C.TextColor3 = Color3.fromRGB(255, 255, 255)
-BLANK_C.TextSize = 14.000
-
-BLACK_E.Name = "BLACK_E"
-BLACK_E.Parent = PANEL_D
-BLACK_E.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-BLACK_E.BorderSizePixel = 0
-BLACK_E.Position = UDim2.new(0.35830617, 0, 0.218390763, 0)
-BLACK_E.Size = UDim2.new(0, 84, 0, 26)
-BLACK_E.Font = Enum.Font.SourceSans
-BLACK_E.Text = ""
-BLACK_E.TextColor3 = Color3.fromRGB(255, 255, 255)
-BLACK_E.TextSize = 14.000
-
-BLANK_D.Name = "BLANK_D"
-BLANK_D.Parent = PANEL_D
-BLANK_D.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-BLANK_D.BorderSizePixel = 0
-BLANK_D.Position = UDim2.new(0.654723108, 0, 0.218390763, 0)
-BLANK_D.Size = UDim2.new(0, 84, 0, 26)
-BLANK_D.Font = Enum.Font.SourceSans
-BLANK_D.Text = ""
-BLANK_D.TextColor3 = Color3.fromRGB(255, 255, 255)
-BLANK_D.TextSize = 14.000
-
 TIP.Name = "TIP"
 TIP.Parent = PANEL_D
 TIP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -330,22 +287,33 @@ TIP.BackgroundTransparency = 1.000
 TIP.Position = UDim2.new(0.0684039071, 0, 0.833333313, 0)
 TIP.Size = UDim2.new(0, 264, 0, 29)
 TIP.Font = Enum.Font.SourceSans
-TIP.Text = "PRESS LEFT 'ALT' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP.Text = "PRESS 'M' TO HIDE/SHOW ETCHER SCRIPTHUB"
 TIP.TextColor3 = Color3.fromRGB(255, 255, 255)
 TIP.TextSize = 14.000
 TIP.TextXAlignment = Enum.TextXAlignment.Left
 TIP.TextYAlignment = Enum.TextYAlignment.Top
 
-ANIMATION.Name = "ANIMATION"
-ANIMATION.Parent = PANEL_D
-ANIMATION.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-ANIMATION.BorderSizePixel = 0
-ANIMATION.Position = UDim2.new(0.35830617, 0, 0.0344827175, 0)
-ANIMATION.Size = UDim2.new(0, 84, 0, 26)
-ANIMATION.Font = Enum.Font.SourceSans
-ANIMATION.Text = "ANIMATIONS"
-ANIMATION.TextColor3 = Color3.fromRGB(255, 255, 255)
-ANIMATION.TextSize = 14.000
+ANIMATIONS.Name = "ANIMATIONS"
+ANIMATIONS.Parent = PANEL_D
+ANIMATIONS.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ANIMATIONS.BorderSizePixel = 0
+ANIMATIONS.Position = UDim2.new(0.35830617, 0, 0.0344827175, 0)
+ANIMATIONS.Size = UDim2.new(0, 84, 0, 26)
+ANIMATIONS.Font = Enum.Font.SourceSans
+ANIMATIONS.Text = "ANIMATIONS"
+ANIMATIONS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ANIMATIONS.TextSize = 14.000
+
+GAMES.Name = "GAMES"
+GAMES.Parent = PANEL_D
+GAMES.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GAMES.BorderSizePixel = 0
+GAMES.Position = UDim2.new(0.654723108, 0, 0.0344827175, 0)
+GAMES.Size = UDim2.new(0, 84, 0, 26)
+GAMES.Font = Enum.Font.SourceSans
+GAMES.Text = "GAMES"
+GAMES.TextColor3 = Color3.fromRGB(255, 255, 255)
+GAMES.TextSize = 14.000
 
 PANEL_E.Name = "PANEL_E"
 PANEL_E.Parent = ETCHER
@@ -354,6 +322,7 @@ PANEL_E.BorderSizePixel = 0
 PANEL_E.Position = UDim2.new(0.0187499989, 0, 0.130434781, 0)
 PANEL_E.Selectable = false
 PANEL_E.Size = UDim2.new(0, 307, 0, 174)
+PANEL_E.Visible = false
 PANEL_E.BottomImage = "rbxassetid://70105995"
 PANEL_E.MidImage = "rbxassetid://70105995"
 PANEL_E.TopImage = "rbxassetid://70105995"
@@ -387,7 +356,7 @@ TIP_1.BackgroundTransparency = 1.000
 TIP_1.Position = UDim2.new(0.0716612339, 0, 0.0217391253, 0)
 TIP_1.Size = UDim2.new(0, 264, 0, 29)
 TIP_1.Font = Enum.Font.SourceSans
-TIP_1.Text = "PRESS LEFT 'ALT' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP_1.Text = "PRESS 'M' TO HIDE/SHOW ETCHER SCRIPTHUB"
 TIP_1.TextColor3 = Color3.fromRGB(255, 255, 255)
 TIP_1.TextSize = 14.000
 TIP_1.TextXAlignment = Enum.TextXAlignment.Left
@@ -404,17 +373,6 @@ FLY_BUTTON.Text = "FLY"
 FLY_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
 FLY_BUTTON.TextSize = 14.000
 
-LIGHT_BUTTON.Name = "LIGHT_BUTTON"
-LIGHT_BUTTON.Parent = PANEL_E
-LIGHT_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-LIGHT_BUTTON.BorderSizePixel = 0
-LIGHT_BUTTON.Position = UDim2.new(0.0716612414, 0, 0.152122244, 0)
-LIGHT_BUTTON.Size = UDim2.new(0, 174, 0, 26)
-LIGHT_BUTTON.Font = Enum.Font.SourceSans
-LIGHT_BUTTON.Text = "PRIVATE LIGHT"
-LIGHT_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-LIGHT_BUTTON.TextSize = 14.000
-
 PANEL_F.Name = "PANEL_F"
 PANEL_F.Parent = ETCHER
 PANEL_F.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
@@ -426,6 +384,17 @@ PANEL_F.Visible = false
 PANEL_F.BottomImage = "rbxassetid://70105995"
 PANEL_F.MidImage = "rbxassetid://70105995"
 PANEL_F.TopImage = "rbxassetid://70105995"
+
+LEVITATE_BUTTON.Name = "LEVITATE_BUTTON"
+LEVITATE_BUTTON.Parent = PANEL_F
+LEVITATE_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+LEVITATE_BUTTON.BorderSizePixel = 0
+LEVITATE_BUTTON.Position = UDim2.new(0.071661219, 0, 0.0725470334, 0)
+LEVITATE_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+LEVITATE_BUTTON.Font = Enum.Font.SourceSans
+LEVITATE_BUTTON.Text = "LEVITATE"
+LEVITATE_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+LEVITATE_BUTTON.TextSize = 14.000
 
 TIP_2.Name = "TIP_2"
 TIP_2.Parent = PANEL_F
@@ -440,50 +409,115 @@ TIP_2.TextSize = 14.000
 TIP_2.TextXAlignment = Enum.TextXAlignment.Left
 TIP_2.TextYAlignment = Enum.TextYAlignment.Top
 
-LEVITATE_BUTTON.Name = "LEVITATE_BUTTON"
-LEVITATE_BUTTON.Parent = PANEL_F
-LEVITATE_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-LEVITATE_BUTTON.BorderSizePixel = 0
-LEVITATE_BUTTON.Position = UDim2.new(0.0716612861, 0, 0.0704647228, 0)
-LEVITATE_BUTTON.Size = UDim2.new(0, 84, 0, 26)
-LEVITATE_BUTTON.Font = Enum.Font.SourceSans
-LEVITATE_BUTTON.Text = "LEVITATE"
-LEVITATE_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-LEVITATE_BUTTON.TextSize = 14.000
+ESC.Name = "ESC"
+ESC.Parent = ETCHER
+ESC.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ESC.BorderSizePixel = 0
+ESC.Position = UDim2.new(0.021396542, 0, 0.0296518076, 0)
+ESC.Size = UDim2.new(0, 52, 0, 14)
+ESC.Visible = false
+ESC.Font = Enum.Font.SourceSans
+ESC.Text = "ESC"
+ESC.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESC.TextSize = 14.000
 
-ESC_BUTTON.Name = "ESC_BUTTON"
-ESC_BUTTON.Parent = ETCHER
-ESC_BUTTON.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-ESC_BUTTON.BorderSizePixel = 0
-ESC_BUTTON.Position = UDim2.new(0.0250000004, 0, 0.0241545886, 0)
-ESC_BUTTON.Size = UDim2.new(0, 42, 0, 16)
-ESC_BUTTON.Font = Enum.Font.SourceSans
-ESC_BUTTON.Text = "ESC"
-ESC_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
-ESC_BUTTON.TextSize = 14.000
-ESC_BUTTON.TextWrapped = true
+PANEL_G.Name = "PANEL_G"
+PANEL_G.Parent = ETCHER
+PANEL_G.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PANEL_G.BorderSizePixel = 0
+PANEL_G.Position = UDim2.new(0.0187499989, 0, 0.130434781, 0)
+PANEL_G.Selectable = false
+PANEL_G.Size = UDim2.new(0, 307, 0, 174)
+PANEL_G.Visible = false
+PANEL_G.BottomImage = "rbxassetid://70105995"
+PANEL_G.MidImage = "rbxassetid://70105995"
+PANEL_G.TopImage = "rbxassetid://70105995"
 
-SETTINGS.Name = "SETTINGS"
-SETTINGS.Parent = ScreenGui
-SETTINGS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SETTINGS.Size = UDim2.new(0, 200, 0, 50)
-SETTINGS.Visible = false
-SETTINGS.Font = Enum.Font.SourceSans
-SETTINGS.TextColor3 = Color3.fromRGB(0, 0, 0)
-SETTINGS.TextSize = 14.000
+DOR_BUTTON.Name = "DOR_BUTTON"
+DOR_BUTTON.Parent = PANEL_G
+DOR_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+DOR_BUTTON.BorderSizePixel = 0
+DOR_BUTTON.Position = UDim2.new(0.071661219, 0, 0.0725470334, 0)
+DOR_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+DOR_BUTTON.Font = Enum.Font.SourceSans
+DOR_BUTTON.Text = "DOR"
+DOR_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+DOR_BUTTON.TextSize = 14.000
 
-ISSYNAPSE.Name = "ISSYNAPSE"
-ISSYNAPSE.Parent = ScreenGui
-ISSYNAPSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ISSYNAPSE.Size = UDim2.new(0, 200, 0, 50)
-ISSYNAPSE.Visible = false
-ISSYNAPSE.Font = Enum.Font.SourceSans
-ISSYNAPSE.TextColor3 = Color3.fromRGB(0, 0, 0)
-ISSYNAPSE.TextSize = 14.000
+TIP_3.Name = "TIP_3"
+TIP_3.Parent = PANEL_G
+TIP_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_3.BackgroundTransparency = 1.000
+TIP_3.Position = UDim2.new(0.0716612339, 0, 0.0217391253, 0)
+TIP_3.Size = UDim2.new(0, 264, 0, 29)
+TIP_3.Font = Enum.Font.SourceSans
+TIP_3.Text = "PRESS 'M' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_3.TextSize = 14.000
+TIP_3.TextXAlignment = Enum.TextXAlignment.Left
+TIP_3.TextYAlignment = Enum.TextYAlignment.Top
+
+PANEL_H.Name = "PANEL_H"
+PANEL_H.Parent = ETCHER
+PANEL_H.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PANEL_H.BorderSizePixel = 0
+PANEL_H.Position = UDim2.new(0.0187499989, 0, 0.130434781, 0)
+PANEL_H.Selectable = false
+PANEL_H.Size = UDim2.new(0, 307, 0, 174)
+PANEL_H.Visible = false
+PANEL_H.BottomImage = "rbxassetid://70105995"
+PANEL_H.MidImage = "rbxassetid://70105995"
+PANEL_H.TopImage = "rbxassetid://70105995"
+
+TP_SEC_CH_BUTTON.Name = "TP_SEC_CH_BUTTON"
+TP_SEC_CH_BUTTON.Parent = PANEL_H
+TP_SEC_CH_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TP_SEC_CH_BUTTON.BorderSizePixel = 0
+TP_SEC_CH_BUTTON.Position = UDim2.new(0.0716612414, 0, 0.0711627007, 0)
+TP_SEC_CH_BUTTON.Size = UDim2.new(0, 264, 0, 26)
+TP_SEC_CH_BUTTON.Font = Enum.Font.SourceSans
+TP_SEC_CH_BUTTON.Text = "TELEPORT TO SECURITY CHECKPOINT"
+TP_SEC_CH_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+TP_SEC_CH_BUTTON.TextSize = 14.000
+
+TIP_4.Name = "TIP_4"
+TIP_4.Parent = PANEL_H
+TIP_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_4.BackgroundTransparency = 1.000
+TIP_4.Position = UDim2.new(0.0716612339, 0, 0.0217391253, 0)
+TIP_4.Size = UDim2.new(0, 264, 0, 29)
+TIP_4.Font = Enum.Font.SourceSans
+TIP_4.Text = "PRESS 'M' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_4.TextSize = 14.000
+TIP_4.TextXAlignment = Enum.TextXAlignment.Left
+TIP_4.TextYAlignment = Enum.TextYAlignment.Top
+
+TP_DOR_LOBBY_BUTTON.Name = "TP_DOR_LOBBY_BUTTON"
+TP_DOR_LOBBY_BUTTON.Parent = PANEL_H
+TP_DOR_LOBBY_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TP_DOR_LOBBY_BUTTON.BorderSizePixel = 0
+TP_DOR_LOBBY_BUTTON.Position = UDim2.new(0.0684039146, 0, 0.153288305, 0)
+TP_DOR_LOBBY_BUTTON.Size = UDim2.new(0, 264, 0, 26)
+TP_DOR_LOBBY_BUTTON.Font = Enum.Font.SourceSans
+TP_DOR_LOBBY_BUTTON.Text = "TELEPORT TO LOBBY"
+TP_DOR_LOBBY_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+TP_DOR_LOBBY_BUTTON.TextSize = 14.000
+
+GET_ALL_GUNS_DOR_BUTTON.Name = "GET_ALL_GUNS_DOR_BUTTON"
+GET_ALL_GUNS_DOR_BUTTON.Parent = PANEL_H
+GET_ALL_GUNS_DOR_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GET_ALL_GUNS_DOR_BUTTON.BorderSizePixel = 0
+GET_ALL_GUNS_DOR_BUTTON.Position = UDim2.new(0.0684039146, 0, 0.230582982, 0)
+GET_ALL_GUNS_DOR_BUTTON.Size = UDim2.new(0, 264, 0, 26)
+GET_ALL_GUNS_DOR_BUTTON.Font = Enum.Font.SourceSans
+GET_ALL_GUNS_DOR_BUTTON.Text = "GET ALL GUNS"
+GET_ALL_GUNS_DOR_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+GET_ALL_GUNS_DOR_BUTTON.TextSize = 14.000
 
 -- Scripts:
 
-local function YZUDVYW_fake_script() -- ScreenGui.MAIN_HANDLER 
+local function BJJCS_fake_script() -- ScreenGui.MAIN_HANDLER 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local TweenService = game:GetService('TweenService')
@@ -521,7 +555,6 @@ local function YZUDVYW_fake_script() -- ScreenGui.MAIN_HANDLER
 		{TextTransparency = 1}
 	):Play()
 	wait(1)
-	script.Parent.ETCHER.ESC_BUTTON.visible = false
 	script.Parent.LOADING_FRAME.Visible = false
 	script.Parent.ETCHER.Visible = true
 	script.Parent.ETCHER.PANEL_A.Visible = true
@@ -529,10 +562,9 @@ local function YZUDVYW_fake_script() -- ScreenGui.MAIN_HANDLER
 	script.Parent.ETCHER.PANEL_C.Visible = false
 	script.Parent.ETCHER.PANEL_D.Visible = false
 	script.Parent.ETCHER.PANEL_E.Visible = false
-	script.Parent.ETCHER.PANEL_F.Visible = false
 end
-coroutine.wrap(YZUDVYW_fake_script)()
-local function MQZHPT_fake_script() -- PANEL_A.PAGE_A_HANDLER 
+coroutine.wrap(BJJCS_fake_script)()
+local function PSMRWRW_fake_script() -- PANEL_A.PAGE_A_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_A)
 
 	script.Parent.OK_BUTTON.MouseButton1Click:Connect(function()
@@ -540,25 +572,23 @@ local function MQZHPT_fake_script() -- PANEL_A.PAGE_A_HANDLER
 		script.Parent.Parent.PANEL_B.Visible = true
 	end)
 end
-coroutine.wrap(MQZHPT_fake_script)()
-local function DPOLBC_fake_script() -- PANEL_B.PAGE_B_HANDLER 
+coroutine.wrap(PSMRWRW_fake_script)()
+local function RRQGOGL_fake_script() -- PANEL_B.PAGE_B_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_B)
 
 	script.Parent.NO_BUTTON.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		script.Parent.Parent.PANEL_C.Visible = true
-		script.Parent.Parent.ESC_BUTTON.Visible = true
-		script.Parent.Parent.Parent.ISSYNAPSE.Text = "FALSE"
+		script.Parent.Parent.ESC.Visible = true
 	end)
 	script.Parent.YES_BUTTON.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		script.Parent.Parent.PANEL_D.Visible = true
-		script.Parent.Parent.ESC_BUTTON.Visible = true
-		script.Parent.Parent.Parent.ISSYNAPSE.Text = "TRUE"
+		script.Parent.Parent.ESC.Visible = true
 	end)
 end
-coroutine.wrap(DPOLBC_fake_script)()
-local function HBQSTT_fake_script() -- PANEL_C.PAGE_C_HANDLER 
+coroutine.wrap(RRQGOGL_fake_script)()
+local function YPNK_fake_script() -- PANEL_C.PAGE_C_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_C)
 
 	script.Parent.OK_BUTTON_A.MouseButton1Click:Connect(function()
@@ -566,21 +596,25 @@ local function HBQSTT_fake_script() -- PANEL_C.PAGE_C_HANDLER
 		script.Parent.Parent.PANEL_D.Visible = true
 	end)
 end
-coroutine.wrap(HBQSTT_fake_script)()
-local function EPEEL_fake_script() -- PANEL_D.PAGE_C_HANDLER 
+coroutine.wrap(YPNK_fake_script)()
+local function UZUBCJL_fake_script() -- PANEL_D.PAGE_D_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_D)
 
 	script.Parent.GENERAL.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		script.Parent.Parent.PANEL_E.Visible = true
 	end)
-	script.Parent.ANIMATION.MouseButton1Click:Connect(function()
+	script.Parent.ANIMATIONS.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		script.Parent.Parent.PANEL_F.Visible = true
 	end)
+	script.Parent.GAMES.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.PANEL_G.Visible = true
+	end)
 end
-coroutine.wrap(EPEEL_fake_script)()
-local function QXVKOXR_fake_script() -- PANEL_E.PAGE_E_HANDLER 
+coroutine.wrap(UZUBCJL_fake_script)()
+local function GEAHMP_fake_script() -- PANEL_E.PAGE_E_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_E)
 
 	local TweenService = game:GetService("TweenService")
@@ -659,7 +693,6 @@ local function QXVKOXR_fake_script() -- PANEL_E.PAGE_E_HANDLER
 	end)
 	
 	local FLY_ACTIVE = false
-	local LIGHT_ACTIVE = false
 	
 	script.Parent.KILL_BUTTON.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
@@ -677,33 +710,106 @@ local function QXVKOXR_fake_script() -- PANEL_E.PAGE_E_HANDLER
 			Fly()
 		end
 	end)
-	script.Parent.LIGHT_BUTTON.MouseButton1Click:Connect(function()
-		LIGHT_ACTIVE = not LIGHT_ACTIVE
-		if LIGHT_ACTIVE then
-			local character = game:GetService("Players").LocalPlayer.Character
-			local pointLight = Instance.new("PointLight")
-			pointLight.Parent = character.HumanoidRootPart
+end
+coroutine.wrap(GEAHMP_fake_script)()
+local function GCQJIXG_fake_script() -- PANEL_F.PAGE_F_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_F)
+
+	-- LEVITATE ANIMATION --
+	local LEVITATE_ANIMATION = Instance.new("Animation")
+	LEVITATE_ANIMATION.AnimationId = "rbxassetid://313762630"
+	local LEVITATE_TRACK = game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):LoadAnimation(LEVITATE_ANIMATION)
+	local LEVITATE_ACTIVE = false
+	
+	script.Parent.LEVITATE_BUTTON.MouseButton1Click:Connect(function()
+		LEVITATE_ACTIVE = not LEVITATE_ACTIVE
+		if LEVITATE_ACTIVE then
+			LEVITATE_TRACK:Play(0.1, 1, 1)
 		else
-			local character = game:GetService("Players").LocalPlayer.Character
-			character.HumanoidRootPart.PointLight:Destroy()
+			LEVITATE_TRACK:Stop()
 		end
 	end)
 end
-coroutine.wrap(QXVKOXR_fake_script)()
-local function FXOO_fake_script() -- ETCHER.DRAG_HANDLER 
+coroutine.wrap(GCQJIXG_fake_script)()
+local function RHAWGU_fake_script() -- ESC.ESC_HANDLER 
+	local script = Instance.new('LocalScript', ESC)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.PANEL_A.Visible = false
+		script.Parent.Parent.PANEL_B.Visible = false
+		script.Parent.Parent.PANEL_C.Visible = false
+		script.Parent.Parent.PANEL_D.Visible = true
+		script.Parent.Parent.PANEL_E.Visible = false
+		script.Parent.Parent.PANEL_F.Visible = false
+		script.Parent.Parent.PANEL_G.Visible = false
+		script.Parent.Parent.PANEL_H.Visible = false
+	end)
+end
+coroutine.wrap(RHAWGU_fake_script)()
+local function TOBV_fake_script() -- PANEL_G.PAGE_G_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_G)
+
+	script.Parent.DOR_BUTTON.MouseButton1Click:Connect(function()
+		script.Parent.Parent.PANEL_A.Visible = false
+		script.Parent.Parent.PANEL_B.Visible = false
+		script.Parent.Parent.PANEL_C.Visible = false
+		script.Parent.Parent.PANEL_D.Visible = false
+		script.Parent.Parent.PANEL_E.Visible = false
+		script.Parent.Parent.PANEL_F.Visible = false
+		script.Parent.Parent.PANEL_G.Visible = false
+		script.Parent.Parent.PANEL_H.Visible = true
+	end)
+end
+coroutine.wrap(TOBV_fake_script)()
+local function PPKBY_fake_script() -- PANEL_H.PAGE_H_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_H)
+
+	script.Parent.TP_SEC_CH_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11.1349, 43.3443, -545.94))
+	end)
+	script.Parent.TP_DOR_LOBBY_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(35.401, 3.49774, -90.7336))
+	end)
+	script.Parent.GET_ALL_GUNS_DOR_BUTTON.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").AdminTools.AK47:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools["Beretta M9"]:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools["Desert Eagle"]:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.Flashbang:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.G17:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.HK33:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M18:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M1911:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M1928:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M249:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M4A1:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M67:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.M870:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.MP5:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.MP7A1:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.P90:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.R700:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.TT33:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools["Tact HK416"]:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools["Tact M4"]:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.USP:Clone().Parent = game.Players.LocalPlayer.Backpack
+		game:GetService("ReplicatedStorage").AdminTools.Handcuffs:Clone().Parent = game.Players.LocalPlayer.Backpack
+	end)
+end
+coroutine.wrap(PPKBY_fake_script)()
+local function YFIPXJG_fake_script() -- ETCHER.DRAGIFY 
 	local script = Instance.new('LocalScript', ETCHER)
 
 	local UIS = game:GetService("UserInputService")
 	function dragify(Frame)
 	    dragToggle = nil
-	    local dragSpeed = 0
+	    local dragSpeed = 0.50
 	    dragInput = nil
 	    dragStart = nil
 	    local dragPos = nil
 	    function updateInput(input)
 	        local Delta = input.Position - dragStart
 	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
 	    end
 	    Frame.InputBegan:Connect(function(input)
 	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
@@ -731,45 +837,13 @@ local function FXOO_fake_script() -- ETCHER.DRAG_HANDLER
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(FXOO_fake_script)()
-local function JJAT_fake_script() -- PANEL_F.PAGE_F_HANDLER 
-	local script = Instance.new('LocalScript', PANEL_F)
-
-	-- LEVITATE ANIMATION --
-	local LEVITATE_ANIMATION = Instance.new("Animation")
-	LEVITATE_ANIMATION.AnimationId = "rbxassetid://313762630"
-	local LEVITATE_TRACK = game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):LoadAnimation(LEVITATE_ANIMATION)
-	local LEVITATE_ACTIVE = false
-	
-	script.Parent.LEVITATE_BUTTON.MouseButton1Click:Connect(function()
-		LEVITATE_ACTIVE = not LEVITATE_ACTIVE
-		if LEVITATE_ACTIVE then
-			LEVITATE_TRACK:Play(0.1, 1, 1)
-		else
-			LEVITATE_TRACK:Stop()
-		end
-	end)
-end
-coroutine.wrap(JJAT_fake_script)()
-local function WBMTI_fake_script() -- ESC_BUTTON.ESC_HANDLER 
-	local script = Instance.new('LocalScript', ESC_BUTTON)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.PANEL_A.Visible = false
-		script.Parent.Parent.PANEL_B.Visible = false
-		script.Parent.Parent.PANEL_C.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = true
-		script.Parent.Parent.PANEL_E.Visible = false
-		script.Parent.Parent.PANEL_F.Visible = false
-	end)
-end
-coroutine.wrap(WBMTI_fake_script)()
-local function DXVCDOY_fake_script() -- ScreenGui.HIDE_SLASH_SHOW 
+coroutine.wrap(YFIPXJG_fake_script)()
+local function YMSRKUJ_fake_script() -- ScreenGui.HIDE_SLASH_SHOW 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	game:GetService("UserInputService").InputBegan:connect(function(input, Processed)
 		if not Processed then
-			if input.KeyCode == Enum.KeyCode.LeftAlt then
+			if input.KeyCode == Enum.KeyCode.M then
 				if script.Parent.ETCHER.Visible == true then
 					script.Parent.ETCHER.Visible = false
 				elseif script.Parent.ETCHER.Visible == false then
@@ -779,4 +853,4 @@ local function DXVCDOY_fake_script() -- ScreenGui.HIDE_SLASH_SHOW
 		end
 	end)
 end
-coroutine.wrap(DXVCDOY_fake_script)()
+coroutine.wrap(YMSRKUJ_fake_script)()
