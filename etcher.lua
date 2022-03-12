@@ -40,16 +40,33 @@ local ESC = Instance.new("TextButton")
 local PANEL_G = Instance.new("ScrollingFrame")
 local DOR_BUTTON = Instance.new("TextButton")
 local TIP_3 = Instance.new("TextLabel")
+local PL_BUTTON = Instance.new("TextButton")
 local PANEL_H = Instance.new("ScrollingFrame")
 local TP_SEC_CH_BUTTON = Instance.new("TextButton")
 local TIP_4 = Instance.new("TextLabel")
 local TP_DOR_LOBBY_BUTTON = Instance.new("TextButton")
 local GET_ALL_GUNS_DOR_BUTTON = Instance.new("TextButton")
+local PANEL_I = Instance.new("ScrollingFrame")
+local BECOMEPRISONER_BUTTON = Instance.new("TextButton")
+local TIP_5 = Instance.new("TextLabel")
+local BECOMEGUARD_BUTTON = Instance.new("TextButton")
+local GETSHOTGUN_BUTTON = Instance.new("TextButton")
+local GETM9_BUTTON = Instance.new("TextButton")
+local TIP_6 = Instance.new("TextLabel")
+local GUARDSTATION_BUTTON = Instance.new("TextButton")
+local OUTSIDEPCELLS_BUTTON = Instance.new("TextButton")
+local CAFETERIA_BUTTON = Instance.new("TextButton")
+local COURTYARD_BUTTON = Instance.new("TextButton")
+local OUTSIDEPRISON_BUTTON = Instance.new("TextButton")
+local TIP_5_2 = Instance.new("TextLabel")
+local PANEL_J = Instance.new("ScrollingFrame")
+local TIP_5_3 = Instance.new("TextLabel")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 LOADING_FRAME.Name = "LOADING_FRAME"
 LOADING_FRAME.Parent = ScreenGui
@@ -109,6 +126,7 @@ PANEL_A.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 PANEL_A.BorderSizePixel = 0
 PANEL_A.Position = UDim2.new(0.0218749996, 0, 0.130434781, 0)
 PANEL_A.Size = UDim2.new(0, 307, 0, 174)
+PANEL_A.Visible = false
 
 CREDIT_A.Name = "CREDIT_A"
 CREDIT_A.Parent = PANEL_A
@@ -457,6 +475,17 @@ TIP_3.TextSize = 14.000
 TIP_3.TextXAlignment = Enum.TextXAlignment.Left
 TIP_3.TextYAlignment = Enum.TextYAlignment.Top
 
+PL_BUTTON.Name = "PL_BUTTON"
+PL_BUTTON.Parent = PANEL_G
+PL_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+PL_BUTTON.BorderSizePixel = 0
+PL_BUTTON.Position = UDim2.new(0.364820838, 0, 0.0725470334, 0)
+PL_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+PL_BUTTON.Font = Enum.Font.SourceSans
+PL_BUTTON.Text = "PRISON LIFE"
+PL_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+PL_BUTTON.TextSize = 14.000
+
 PANEL_H.Name = "PANEL_H"
 PANEL_H.Parent = ETCHER
 PANEL_H.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
@@ -515,12 +544,245 @@ GET_ALL_GUNS_DOR_BUTTON.Text = "GET ALL GUNS"
 GET_ALL_GUNS_DOR_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
 GET_ALL_GUNS_DOR_BUTTON.TextSize = 14.000
 
+PANEL_I.Name = "PANEL_I"
+PANEL_I.Parent = ETCHER
+PANEL_I.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PANEL_I.BorderSizePixel = 0
+PANEL_I.Position = UDim2.new(0.0187499989, 0, 0.130434781, 0)
+PANEL_I.Selectable = false
+PANEL_I.Size = UDim2.new(0, 307, 0, 174)
+PANEL_I.BottomImage = "rbxassetid://70105995"
+PANEL_I.MidImage = "rbxassetid://70105995"
+PANEL_I.TopImage = "rbxassetid://70105995"
+
+BECOMEPRISONER_BUTTON.Name = "BECOMEPRISONER_BUTTON"
+BECOMEPRISONER_BUTTON.Parent = PANEL_I
+BECOMEPRISONER_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BECOMEPRISONER_BUTTON.BorderSizePixel = 0
+BECOMEPRISONER_BUTTON.Position = UDim2.new(0.0716612414, 0, 0.141211003, 0)
+BECOMEPRISONER_BUTTON.Size = UDim2.new(0, 264, 0, 26)
+BECOMEPRISONER_BUTTON.Font = Enum.Font.SourceSans
+BECOMEPRISONER_BUTTON.Text = "BECOME PRISONER"
+BECOMEPRISONER_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+BECOMEPRISONER_BUTTON.TextSize = 14.000
+
+TIP_5.Name = "TIP_5"
+TIP_5.Parent = PANEL_I
+TIP_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_5.BackgroundTransparency = 1.000
+TIP_5.Position = UDim2.new(0.0716612339, 0, 0.0217391253, 0)
+TIP_5.Size = UDim2.new(0, 264, 0, 29)
+TIP_5.Font = Enum.Font.SourceSans
+TIP_5.Text = "PRESS 'M' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_5.TextSize = 14.000
+TIP_5.TextXAlignment = Enum.TextXAlignment.Left
+TIP_5.TextYAlignment = Enum.TextYAlignment.Top
+
+BECOMEGUARD_BUTTON.Name = "BECOMEGUARD_BUTTON"
+BECOMEGUARD_BUTTON.Parent = PANEL_I
+BECOMEGUARD_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BECOMEGUARD_BUTTON.BorderSizePixel = 0
+BECOMEGUARD_BUTTON.Position = UDim2.new(0.0716612414, 0, 0.223336607, 0)
+BECOMEGUARD_BUTTON.Size = UDim2.new(0, 264, 0, 26)
+BECOMEGUARD_BUTTON.Font = Enum.Font.SourceSans
+BECOMEGUARD_BUTTON.Text = "BECOME GUARD"
+BECOMEGUARD_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+BECOMEGUARD_BUTTON.TextSize = 14.000
+
+GETSHOTGUN_BUTTON.Name = "GETSHOTGUN_BUTTON"
+GETSHOTGUN_BUTTON.Parent = PANEL_I
+GETSHOTGUN_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GETSHOTGUN_BUTTON.BorderSizePixel = 0
+GETSHOTGUN_BUTTON.Position = UDim2.new(0.071661219, 0, 0.302015632, 0)
+GETSHOTGUN_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+GETSHOTGUN_BUTTON.Font = Enum.Font.SourceSans
+GETSHOTGUN_BUTTON.Text = "GET SHOTGUN"
+GETSHOTGUN_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+GETSHOTGUN_BUTTON.TextSize = 14.000
+
+GETM9_BUTTON.Name = "GETM9_BUTTON"
+GETM9_BUTTON.Parent = PANEL_I
+GETM9_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GETM9_BUTTON.BorderSizePixel = 0
+GETM9_BUTTON.Position = UDim2.new(0.364820838, 0, 0.302015632, 0)
+GETM9_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+GETM9_BUTTON.Font = Enum.Font.SourceSans
+GETM9_BUTTON.Text = "GET M9"
+GETM9_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+GETM9_BUTTON.TextSize = 14.000
+
+TIP_6.Name = "TIP_6"
+TIP_6.Parent = PANEL_I
+TIP_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_6.BackgroundTransparency = 1.000
+TIP_6.Position = UDim2.new(0.0716612339, 0, 0.384057969, 0)
+TIP_6.Size = UDim2.new(0, 264, 0, 29)
+TIP_6.Font = Enum.Font.SourceSans
+TIP_6.Text = "TELEPORTS"
+TIP_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_6.TextSize = 14.000
+TIP_6.TextXAlignment = Enum.TextXAlignment.Left
+TIP_6.TextYAlignment = Enum.TextYAlignment.Top
+
+GUARDSTATION_BUTTON.Name = "GUARDSTATION_BUTTON"
+GUARDSTATION_BUTTON.Parent = PANEL_I
+GUARDSTATION_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GUARDSTATION_BUTTON.BorderSizePixel = 0
+GUARDSTATION_BUTTON.Position = UDim2.new(0.0716612339, 0, 0.439696789, 0)
+GUARDSTATION_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+GUARDSTATION_BUTTON.Font = Enum.Font.SourceSans
+GUARDSTATION_BUTTON.Text = "GUARD STATION"
+GUARDSTATION_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+GUARDSTATION_BUTTON.TextSize = 14.000
+
+OUTSIDEPCELLS_BUTTON.Name = "OUTSIDEPCELLS_BUTTON"
+OUTSIDEPCELLS_BUTTON.Parent = PANEL_I
+OUTSIDEPCELLS_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+OUTSIDEPCELLS_BUTTON.BorderSizePixel = 0
+OUTSIDEPCELLS_BUTTON.Position = UDim2.new(0.364820838, 0, 0.439696789, 0)
+OUTSIDEPCELLS_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+OUTSIDEPCELLS_BUTTON.Font = Enum.Font.SourceSans
+OUTSIDEPCELLS_BUTTON.Text = "PRISON CELLS"
+OUTSIDEPCELLS_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+OUTSIDEPCELLS_BUTTON.TextSize = 14.000
+
+CAFETERIA_BUTTON.Name = "CAFETERIA_BUTTON"
+CAFETERIA_BUTTON.Parent = PANEL_I
+CAFETERIA_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CAFETERIA_BUTTON.BorderSizePixel = 0
+CAFETERIA_BUTTON.Position = UDim2.new(0.657980442, 0, 0.439696789, 0)
+CAFETERIA_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+CAFETERIA_BUTTON.Font = Enum.Font.SourceSans
+CAFETERIA_BUTTON.Text = "CAFETERIA"
+CAFETERIA_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+CAFETERIA_BUTTON.TextSize = 14.000
+
+COURTYARD_BUTTON.Name = "COURTYARD_BUTTON"
+COURTYARD_BUTTON.Parent = PANEL_I
+COURTYARD_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+COURTYARD_BUTTON.BorderSizePixel = 0
+COURTYARD_BUTTON.Position = UDim2.new(0.0716612339, 0, 0.516991496, 0)
+COURTYARD_BUTTON.Size = UDim2.new(0, 84, 0, 26)
+COURTYARD_BUTTON.Font = Enum.Font.SourceSans
+COURTYARD_BUTTON.Text = "COURT YARD"
+COURTYARD_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+COURTYARD_BUTTON.TextSize = 14.000
+
+OUTSIDEPRISON_BUTTON.Name = "OUTSIDEPRISON_BUTTON"
+OUTSIDEPRISON_BUTTON.Parent = PANEL_I
+OUTSIDEPRISON_BUTTON.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+OUTSIDEPRISON_BUTTON.BorderSizePixel = 0
+OUTSIDEPRISON_BUTTON.Position = UDim2.new(0.364820838, 0, 0.517661154, 0)
+OUTSIDEPRISON_BUTTON.Size = UDim2.new(0, 174, 0, 25)
+OUTSIDEPRISON_BUTTON.Font = Enum.Font.SourceSans
+OUTSIDEPRISON_BUTTON.Text = "OUTSIDE PRISON"
+OUTSIDEPRISON_BUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+OUTSIDEPRISON_BUTTON.TextSize = 14.000
+
+TIP_5_2.Name = "TIP_5"
+TIP_5_2.Parent = PANEL_I
+TIP_5_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_5_2.BackgroundTransparency = 1.000
+TIP_5_2.Position = UDim2.new(0.0716612339, 0, 0.0917874351, 0)
+TIP_5_2.Size = UDim2.new(0, 264, 0, 29)
+TIP_5_2.Font = Enum.Font.SourceSans
+TIP_5_2.Text = "UTILITIES"
+TIP_5_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_5_2.TextSize = 14.000
+TIP_5_2.TextXAlignment = Enum.TextXAlignment.Left
+TIP_5_2.TextYAlignment = Enum.TextYAlignment.Top
+
+PANEL_J.Name = "PANEL_J"
+PANEL_J.Parent = ETCHER
+PANEL_J.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PANEL_J.BorderSizePixel = 0
+PANEL_J.Position = UDim2.new(0.0187499989, 0, 0.130434781, 0)
+PANEL_J.Selectable = false
+PANEL_J.Size = UDim2.new(0, 307, 0, 174)
+PANEL_J.BottomImage = "rbxassetid://70105995"
+PANEL_J.MidImage = "rbxassetid://70105995"
+PANEL_J.TopImage = "rbxassetid://70105995"
+
+TIP_5_3.Name = "TIP_5"
+TIP_5_3.Parent = PANEL_J
+TIP_5_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIP_5_3.BackgroundTransparency = 1.000
+TIP_5_3.Position = UDim2.new(0.0716612339, 0, 0.0217391253, 0)
+TIP_5_3.Size = UDim2.new(0, 264, 0, 29)
+TIP_5_3.Font = Enum.Font.SourceSans
+TIP_5_3.Text = "PRESS 'M' TO HIDE/SHOW ETCHER SCRIPTHUB"
+TIP_5_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TIP_5_3.TextSize = 14.000
+TIP_5_3.TextXAlignment = Enum.TextXAlignment.Left
+TIP_5_3.TextYAlignment = Enum.TextYAlignment.Top
+
+-- Module Scripts:
+
+local fake_module_scripts = {}
+
+do -- ScreenGui.MODULE
+	local script = Instance.new('ModuleScript', ScreenGui)
+	script.Name = "MODULE"
+	local function module_script()
+		local module = {}
+		
+		module.ETCHER_FRAME = script.Parent.ETCHER
+		
+		function module.HIDE_ALL_WINDOWS()
+			module.ETCHER_FRAME.PANEL_A.Visible = false
+			module.ETCHER_FRAME.PANEL_B.Visible = false
+			module.ETCHER_FRAME.PANEL_C.Visible = false
+			module.ETCHER_FRAME.PANEL_D.Visible = false
+			module.ETCHER_FRAME.PANEL_E.Visible = false
+			module.ETCHER_FRAME.PANEL_F.Visible = false
+			module.ETCHER_FRAME.PANEL_G.Visible = false
+			module.ETCHER_FRAME.PANEL_H.Visible = false
+			module.ETCHER_FRAME.PANEL_I.Visible = false
+			module.ETCHER_FRAME.PANEL_J.Visible = false
+		end
+		
+		function module.SHOW_ALL_WINDOWS()
+			module.ETCHER_FRAME.PANEL_A.Visible = true
+			module.ETCHER_FRAME.PANEL_B.Visible = true
+			module.ETCHER_FRAME.PANEL_C.Visible = true
+			module.ETCHER_FRAME.PANEL_D.Visible = true
+			module.ETCHER_FRAME.PANEL_E.Visible = true
+			module.ETCHER_FRAME.PANEL_F.Visible = true
+			module.ETCHER_FRAME.PANEL_G.Visible = true
+			module.ETCHER_FRAME.PANEL_H.Visible = true
+			module.ETCHER_FRAME.PANEL_I.Visible = true
+			module.ETCHER_FRAME.PANEL_J.Visible = true
+		end
+		
+		
+		function module.SHOW_WINDOW(windowname)
+			module.HIDE_ALL_WINDOWS()
+			module.ETCHER_FRAME:FindFirstChild("PANEL_"..windowname).Visible = true
+		end
+		
+		return module
+		
+	end
+	fake_module_scripts[script] = module_script
+end
+
+
 -- Scripts:
 
-local function BJJCS_fake_script() -- ScreenGui.MAIN_HANDLER 
+local function ESEFJGV_fake_script() -- ScreenGui.MAIN_HANDLER 
 	local script = Instance.new('LocalScript', ScreenGui)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local TweenService = game:GetService('TweenService')
+	local ETCHER_MODULE = require(script.Parent.MODULE)
 	script.Parent.ETCHER.Visible = false
 	script.Parent.LOADING_FRAME.Visible = true
 	TweenService:Create(
@@ -555,67 +817,99 @@ local function BJJCS_fake_script() -- ScreenGui.MAIN_HANDLER
 		{TextTransparency = 1}
 	):Play()
 	wait(1)
-	script.Parent.LOADING_FRAME.Visible = false
-	script.Parent.ETCHER.Visible = true
-	script.Parent.ETCHER.PANEL_A.Visible = true
-	script.Parent.ETCHER.PANEL_B.Visible = false
-	script.Parent.ETCHER.PANEL_C.Visible = false
-	script.Parent.ETCHER.PANEL_D.Visible = false
-	script.Parent.ETCHER.PANEL_E.Visible = false
+	ETCHER_MODULE.SHOW_WINDOW("A")
 end
-coroutine.wrap(BJJCS_fake_script)()
-local function PSMRWRW_fake_script() -- PANEL_A.PAGE_A_HANDLER 
+coroutine.wrap(ESEFJGV_fake_script)()
+local function JQUGAS_fake_script() -- PANEL_A.PAGE_A_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_A)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
+	local ETCHER_MODULE = require(script.Parent.Parent.Parent.MODULE)
 	script.Parent.OK_BUTTON.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_B.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("B")
 	end)
 end
-coroutine.wrap(PSMRWRW_fake_script)()
-local function RRQGOGL_fake_script() -- PANEL_B.PAGE_B_HANDLER 
+coroutine.wrap(JQUGAS_fake_script)()
+local function JGRPWS_fake_script() -- PANEL_B.PAGE_B_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_B)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
+	local ETCHER_MODULE = require(script.Parent.Parent.Parent.MODULE)
 	script.Parent.NO_BUTTON.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_C.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("C")
 		script.Parent.Parent.ESC.Visible = true
 	end)
 	script.Parent.YES_BUTTON.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("D")
 		script.Parent.Parent.ESC.Visible = true
 	end)
 end
-coroutine.wrap(RRQGOGL_fake_script)()
-local function YPNK_fake_script() -- PANEL_C.PAGE_C_HANDLER 
+coroutine.wrap(JGRPWS_fake_script)()
+local function JILQQ_fake_script() -- PANEL_C.PAGE_C_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_C)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
+	local ETCHER_MODULE = require(script.Parent.Parent.Parent.MODULE)
 	script.Parent.OK_BUTTON_A.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("D")
 	end)
 end
-coroutine.wrap(YPNK_fake_script)()
-local function UZUBCJL_fake_script() -- PANEL_D.PAGE_D_HANDLER 
+coroutine.wrap(JILQQ_fake_script)()
+local function IGIAA_fake_script() -- PANEL_D.PAGE_D_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_D)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
+	local ETCHER_MODULE = require(script.Parent.Parent.Parent.MODULE)
 	script.Parent.GENERAL.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_E.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("E")
 	end)
 	script.Parent.ANIMATIONS.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_F.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("F")
 	end)
 	script.Parent.GAMES.MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.PANEL_G.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("G")
 	end)
 end
-coroutine.wrap(UZUBCJL_fake_script)()
-local function GEAHMP_fake_script() -- PANEL_E.PAGE_E_HANDLER 
+coroutine.wrap(IGIAA_fake_script)()
+local function SGKHXDT_fake_script() -- PANEL_E.PAGE_E_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_E)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local TweenService = game:GetService("TweenService")
 	repeat wait() 
@@ -711,9 +1005,17 @@ local function GEAHMP_fake_script() -- PANEL_E.PAGE_E_HANDLER
 		end
 	end)
 end
-coroutine.wrap(GEAHMP_fake_script)()
-local function GCQJIXG_fake_script() -- PANEL_F.PAGE_F_HANDLER 
+coroutine.wrap(SGKHXDT_fake_script)()
+local function RZGW_fake_script() -- PANEL_F.PAGE_F_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_F)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	-- LEVITATE ANIMATION --
 	local LEVITATE_ANIMATION = Instance.new("Animation")
@@ -730,39 +1032,54 @@ local function GCQJIXG_fake_script() -- PANEL_F.PAGE_F_HANDLER
 		end
 	end)
 end
-coroutine.wrap(GCQJIXG_fake_script)()
-local function RHAWGU_fake_script() -- ESC.ESC_HANDLER 
+coroutine.wrap(RZGW_fake_script)()
+local function YCNZF_fake_script() -- ESC.ESC_HANDLER 
 	local script = Instance.new('LocalScript', ESC)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
+	local ETCHER_MODULE = require(script.Parent.Parent.Parent.MODULE)
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.PANEL_A.Visible = false
-		script.Parent.Parent.PANEL_B.Visible = false
-		script.Parent.Parent.PANEL_C.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = true
-		script.Parent.Parent.PANEL_E.Visible = false
-		script.Parent.Parent.PANEL_F.Visible = false
-		script.Parent.Parent.PANEL_G.Visible = false
-		script.Parent.Parent.PANEL_H.Visible = false
+		ETCHER_MODULE.SHOW_WINDOW("D")
 	end)
 end
-coroutine.wrap(RHAWGU_fake_script)()
-local function TOBV_fake_script() -- PANEL_G.PAGE_G_HANDLER 
+coroutine.wrap(YCNZF_fake_script)()
+local function RZVC_fake_script() -- PANEL_G.PAGE_G_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_G)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
+	local ETCHER_MODULE = require(script.Parent.Parent.Parent.MODULE)
 	script.Parent.DOR_BUTTON.MouseButton1Click:Connect(function()
-		script.Parent.Parent.PANEL_A.Visible = false
-		script.Parent.Parent.PANEL_B.Visible = false
-		script.Parent.Parent.PANEL_C.Visible = false
-		script.Parent.Parent.PANEL_D.Visible = false
-		script.Parent.Parent.PANEL_E.Visible = false
-		script.Parent.Parent.PANEL_F.Visible = false
-		script.Parent.Parent.PANEL_G.Visible = false
-		script.Parent.Parent.PANEL_H.Visible = true
+		ETCHER_MODULE.SHOW_WINDOW("H")
+	end)
+	script.Parent.PL_BUTTON.MouseButton1Click:Connect(function()
+		ETCHER_MODULE.SHOW_WINDOW("I")
 	end)
 end
-coroutine.wrap(TOBV_fake_script)()
-local function PPKBY_fake_script() -- PANEL_H.PAGE_H_HANDLER 
+coroutine.wrap(RZVC_fake_script)()
+local function OROGL_fake_script() -- PANEL_H.PAGE_H_HANDLER 
 	local script = Instance.new('LocalScript', PANEL_H)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.TP_SEC_CH_BUTTON.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11.1349, 43.3443, -545.94))
@@ -795,9 +1112,17 @@ local function PPKBY_fake_script() -- PANEL_H.PAGE_H_HANDLER
 		game:GetService("ReplicatedStorage").AdminTools.Handcuffs:Clone().Parent = game.Players.LocalPlayer.Backpack
 	end)
 end
-coroutine.wrap(PPKBY_fake_script)()
-local function YFIPXJG_fake_script() -- ETCHER.DRAGIFY 
+coroutine.wrap(OROGL_fake_script)()
+local function PHNI_fake_script() -- ETCHER.DRAGIFY 
 	local script = Instance.new('LocalScript', ETCHER)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local UIS = game:GetService("UserInputService")
 	function dragify(Frame)
@@ -837,9 +1162,85 @@ local function YFIPXJG_fake_script() -- ETCHER.DRAGIFY
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(YFIPXJG_fake_script)()
-local function YMSRKUJ_fake_script() -- ScreenGui.HIDE_SLASH_SHOW 
+coroutine.wrap(PHNI_fake_script)()
+local function VGMCOPY_fake_script() -- PANEL_I.PAGE_I_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_I)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	script.Parent.BECOMEPRISONER_BUTTON.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = "Bright orange"
+		}
+		workspace.Remote.TeamEvent:FireServer(unpack(args))
+	end)
+	script.Parent.BECOMEGUARD_BUTTON.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = "Bright blue"
+		}
+		workspace.Remote.TeamEvent:FireServer(unpack(args))
+	end)
+	script.Parent.GETSHOTGUN_BUTTON.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP
+		}
+		workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+	end)
+	script.Parent.GETM9_BUTTON.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
+		}
+		workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+	end)
+	script.Parent.GUARDSTATION_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(836.316, 99.9572, 2303.19))
+	end)
+	script.Parent.OUTSIDEPCELLS_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(917.632, 99.9572, 2448.92))
+	end)
+	script.Parent.CAFETERIA_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(928.469, 99.9233, 2288.05))
+	end)
+	script.Parent.COURTYARD_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(836.777, 98.1233, 2414.61))
+	end)
+	script.Parent.OUTSIDEPRISON_BUTTON.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(457.066, 98.1559, 2249.63))
+	end)
+end
+coroutine.wrap(VGMCOPY_fake_script)()
+local function OEUCIO_fake_script() -- PANEL_J.PAGE_J_HANDLER 
+	local script = Instance.new('LocalScript', PANEL_J)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	script.Parent.BECOMEPRISONER_BUTTON.MouseButton1Click:Connect(function()
+		
+	end)
+end
+coroutine.wrap(OEUCIO_fake_script)()
+local function NTGX_fake_script() -- ScreenGui.HIDE_SLASH_SHOW 
 	local script = Instance.new('LocalScript', ScreenGui)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	game:GetService("UserInputService").InputBegan:connect(function(input, Processed)
 		if not Processed then
@@ -853,4 +1254,4 @@ local function YMSRKUJ_fake_script() -- ScreenGui.HIDE_SLASH_SHOW
 		end
 	end)
 end
-coroutine.wrap(YMSRKUJ_fake_script)()
+coroutine.wrap(NTGX_fake_script)()
